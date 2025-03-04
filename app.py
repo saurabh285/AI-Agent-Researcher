@@ -4,9 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import os 
 import io
-
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 def fetch_news_content(url):
     """Scrape article content from a news URL."""
