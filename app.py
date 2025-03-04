@@ -3,7 +3,7 @@ import google.generativeai as genai
 import requests
 from bs4 import BeautifulSoup
 
-genai.configure(api_key="")
+genai.configure(api_key="GEMINI_API_KEY")
 
 def fetch_news_content(url):
     """Scrape article content from a news URL."""
