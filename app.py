@@ -3,7 +3,7 @@ import google.generativeai as genai
 import requests
 from bs4 import BeautifulSoup
 
-genai.configure(api_key="YOUR_GEMINI_API_KEY")
+genai.configure(api_key="")
 
 def fetch_news_content(url):
     """Scrape article content from a news URL."""
@@ -36,7 +36,7 @@ st.set_page_config(page_title="AI News Agent", page_icon="📰", layout="wide")
 st.title("📰 AI Research Agent with Gemini 1.5 Flash")
 st.write("Paste a news article URL, and let AI summarize and answer your questions!")
 
-news_url = st.text_input("🔗 Enter News URL", "")
+news_url = st.text_input("🔗 Enter News/Article/Web page URL", "")
 
 if st.button("Fetch & Summarize"):
     if news_url:
